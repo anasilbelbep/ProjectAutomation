@@ -27,7 +27,11 @@ public class CruisePage extends TestBase {
     @FindBy(xpath = "//div/ul/li/button[@aria-label='6 - 9 Days ']")
     WebElement dateBtnDaySelection;
 
-    
+    @FindBy(xpath = "//article[1]//ccl-view-result-grid-item[1]//div[1]//div[1]//ccl-view-result-grid-footer[1]//div[1]//div[2]//a[1]")
+    WebElement learnMoreBtn;
+
+    @FindBy(xpath = "//booking-button[@class='ng-scope ng-isolate-scope']//span[@class='bottom-text ng-binding'][contains(text(),'Book Now')]")
+    WebElement bookNowBtn;
 
 
 
@@ -48,7 +52,10 @@ public class CruisePage extends TestBase {
             dateBtnMonth.click();
             dateBtnDay.click();
             dateBtnDaySelection.click();
-           
+            learnMoreBtn.click();
+            Thread.sleep(3000);
+            bookNowBtn.click();
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
